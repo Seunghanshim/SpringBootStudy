@@ -3,12 +3,11 @@ spring:
     url: jdbc:h2:tcp://localhost/~/JPAstudy/JPApractice
     username: ssh
     password:
-      driver-class-name: org.h2.Driver
-
+    driver-class-name: org.h2.Driver
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     properties:
       hibernate:
 #        show_sql: true
