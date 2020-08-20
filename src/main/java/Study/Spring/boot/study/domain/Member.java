@@ -2,7 +2,6 @@ package Study.Spring.boot.study.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
 import javax.persistence.*;
 import java.util.ArrayList;
