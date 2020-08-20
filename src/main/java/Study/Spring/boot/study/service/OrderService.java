@@ -8,9 +8,12 @@ import Study.Spring.boot.study.domain.OrderItem;
 import Study.Spring.boot.study.repository.ItemRepository;
 import Study.Spring.boot.study.repository.MemberRepository;
 import Study.Spring.boot.study.repository.OrderRepository;
+import Study.Spring.boot.study.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -42,5 +45,9 @@ public class OrderService {
         Order order = orderRepository.findOne(orderId);
 
         order.cancel();
+    }
+
+    public List<Order> findOrders(OrderSearch orderSearch){
+        return orderRepository.findAllByString(orderSearch);
     }
 }
